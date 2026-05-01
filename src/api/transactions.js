@@ -20,3 +20,9 @@ export const getMonthlySummary = async (type, year, month) => {
     });
     return response.data;
 };
+ export const getMonthlyReport = async (year) => {
+    const response = await api.get("/transactions/report", {
+      params: { year },
+    });
+    return response.data;
+  };
